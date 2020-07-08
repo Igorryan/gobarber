@@ -1,69 +1,79 @@
-# Recuperação de senha
+<h1 align="center"><img src="./frontend/src/assets/logo_black.svg"/></h1>
+## Back-end em Node.js
 
-**RF**
+Responsável por intermediar as requisições aos bancos de dados e fornecer retorno em JSON para o front-end web e mobile. Além de enviar e-mail's e tratar de toda regra de negócio.
 
-- O usuário deve poder recuperar sua senha, informando o seu e-mail;
-- O usuário deve receber um email com instruções de recuperação de senha;
-- O usuário deve poder resetar sua senha;
+#### Principais utilizações:
 
-**RNF**
+- Typescript
+- TypeORM
+- Redis
+- MongoDB
+- AWS S3 Storage
+- AWS Email Service
+- BCrypt
+- Date-fns
+- Class-transformer
+- Nodemailer
+- Multer
+- Jest
 
-- Utilizar Mailtrap para testar emails em ambiente de desenvolvimento;
-- Utilizar o Amazon SES para envio de produção;
-- O envio de emails deve acontecer em segundo plano (background job);
+## Iniciando a API Node.js (back-end)
 
-**RN**
+1. Entre na pasta "beckend" e pelo terminal, instale as dependências com o comando:
+```
+yarn
+```
+2. Crie um arquivo "ormconfig.json" e configure os bancos:
+```json
+[
+  {
+    "name": "default",
+    "type": "postgres",
+    "host": "localhost",
+    "port": "5432",
+    "username": "postgres",
+    "password": "igorryan",
+    "database": "gostack_gobarber",
+    "entities": [
+      "src/modules/**/infra/typeorm/entities/*.ts"
+    ],
+    "migrations": ["src/shared/infra/typeorm/migrations/*.ts"],
+    "cli": {
+        "migrationsDir": "src/shared/infra/typeorm/migrations"
+    }
+  },
+  {
+    "name": "mongo",
+    "type": "mongodb",
+    "host": "localhost",
+    "port": "27017",
+    "database": "gostack_gobarber",
+    "useUnifiedTopology": true,
+    "entities": [
+      "src/modules/**/infra/typeorm/schemas/*.ts"
+    ]
+  }
+]
+```
+3. Preencha as variáveis do arquivo ".env.example" com as suas credenciais e renomei-o para ".env"
 
-- O link enviado por email para resetar senha deve se inspirar em 2 horas;
-- O usuário precisa digitar a senha duas vezes (confirmar) ao resetar senha;
+| Variável | Funcionalidade |
+| ------ | ----------- |
+| APP_SECRET   | Um conjunto de caracteres que serve para a criptografia das senhas. |
+| MAIL_DRIVER   | Define qual serviço de e-mail da aplicação, atualmente pode ser setada como <strong>ethereal</strong> ou <strong>ses</strong> |
+| AWS_ACCESS_KEY_ID   | Chave de acesso da conta AWS |
+| AWS_SECRET_ACCESS_KEY   | Segredo de acesso da conta AWS  |
+| STORAGE_DRIVER   | Define qual serviço armazenamento (storage) da aplicação, atualmente pode ser setada como <strong>disk</strong> ou <strong>s3</strong> |
 
-# Atualização do perfil
-
-**RF**
-
-- O usuário deve poder atualizar seu nome, email e senha;
-
-**RN**
-
-- O usuário não pode alterar seu email para um email já utilizado;
-- Para atualizar sua senha, o usuário deve informar sua senha antiga;
-- Para atualizar sua senha, o usuário precisa digitar a senha duas vezes (confirmar);
-
-# Painel do prestador
-
-**RF**
-
-- O usuário deve poder listar seus agendamentos de um dia especifico;
-- O prestador deve receber uma notificação sempre que houver um novo agendamento marcado;
-- O prestador deve poder visualizar as notificações não lidas e lidas;
-
-**RNF**
-
-- Os agendamentos do prestador no dia deve ser armazenado em cache;
-- As notificações do prestador devem ser armazenadas no MongoDB;
-- As notificações do prestador devem ser enviadas em tempo-real utilizando Socket.io;
-
-**RN**
-
-- A notificação deve ter um status de lida ou não lida para que o prestador possa controlar;
-
-# Agendamento de serviços
-
-**RF**
-
-- O usuário deve poder listar todos os prestadores de serviço cadastrados;
-- O usuário deve poder listar os dias de um mês com pelo menos um horário disponível de um prestador específico;
-- O usuário deve poder listar os horários disponíveis em um dia especifico de um prestador;
-- O usuário deve poder realizar um novo agendamento com um prestador;
-
-**RNF**
-
-- A listagem de prestadores deve ser armazenadas em cache;
-
-**RN**
-
-- Cada agendamento deve durar 1h exatamente;
-- Os agendamentos devem estar disponíveis entre 8h às 18h (Primeiro às 8h, último às 17h);
-- O usuário não pode agendar em um horário já agendado;
-- O usuário não pode agendar em um horário que já passou;
-- O usuário não pode agendar serviços consigo mesmo;
+4. Execute as migrations com o comando:
+```
+yarn typeorm migration:run
+```
+5. Por último, execute o comando abaixo para iniciar a API:
+```
+yarn dev:server
+```
+<div align="center">
+  <sub>Built with ❤︎ by <a href="https://www.linkedin.com/in/igorryan/">Igor Ryan</a>
+</div>

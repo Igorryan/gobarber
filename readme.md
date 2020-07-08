@@ -42,15 +42,20 @@ Responsável por intermediar as requisições aos bancos de dados e fornecer ret
 <img src="./frontend/src/assets/mobile-screens.png"/>
 </h4>
 
+# Configurando o projeto
+Faça o clone do projeto:
+  ```
+  git clone https://github.com/Igorryan/gobarber
+  ```
+
 ## Iniciando a API Node.js (back-end)
 
-Entre na pasta "beck-end" e pelo terminal, execute o comando:
+1. Entre na pasta "beckend" e pelo terminal, instale as dependências com o comando:
 ```
 yarn
 ```
-
-Crie um arquivo "ormconfig.json" e configure os bancos:
-```
+2. Crie um arquivo "ormconfig.json" e configure os bancos:
+```json
 [
   {
     "name": "default",
@@ -81,7 +86,7 @@ Crie um arquivo "ormconfig.json" e configure os bancos:
   }
 ]
 ```
-Preencha as variáveis do arquivo ".env.example" com as suas credenciais e renomei-o para ".env"
+3. Preencha as variáveis do arquivo ".env.example" com as suas credenciais e renomei-o para ".env"
 
 | Variável | Funcionalidade |
 | ------ | ----------- |
@@ -91,17 +96,42 @@ Preencha as variáveis do arquivo ".env.example" com as suas credenciais e renom
 | AWS_SECRET_ACCESS_KEY   | Segredo de acesso da conta AWS  |
 | STORAGE_DRIVER   | Define qual serviço armazenamento (storage) da aplicação, atualmente pode ser setada como <strong>disk</strong> ou <strong>s3</strong> |
 
-Lembre-se de executar as migrations com o comando:
+4. Execute as migrations com o comando:
 ```
 yarn typeorm migration:run
 ```
-
-Por último, execute o comando abaixo para iniciar a API:
+5. Por último, execute o comando abaixo para iniciar a API:
 ```
 yarn dev:server
 ```
 
+## Iniciando a Aplicação Web (front-end)
 
+1. Entre na pasta "frontend"
+2. Instale as dependências com o comando:
+```
+yarn
+```
+3. Execute o projeto com 
+```
+yarn start
+```
+
+Lembre-se de estar com a API em execução.
+
+## Iniciando a Aplicação Mobile (mobile)
+
+1. Entre na pasta "mobile"
+2. Instale as dependências com o comando:
+```
+yarn
+```
+3. Execute o projeto com 
+```
+yarn android ou yarn ios ou npx react-native run-android
+```
+
+Lembre-se de estar com a API em execução.
 <div align="center">
   <sub>Built with ❤︎ by <a href="https://www.linkedin.com/in/igorryan/">Igor Ryan</a>
 </div>
