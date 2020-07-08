@@ -1,4 +1,4 @@
-<h1 align="center"><img src="../frontend/src/assets/logo_black.svg"/></h1>
+<h6 align="center"><img src="../frontend/src/assets/logo_black.svg"/></h6>
 
 ## Iniciando a Aplicação Mobile (mobile)
 
