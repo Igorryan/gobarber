@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[Back-end](#Back-end-em-Node.js) | [Front-end Web](#Front-end-em-ReactJS) | [Mobile](#Mobile-em-React-Native)
+[Back-end](#back-end-em-nodejs) | [Front-end Web](#front-end-em-reactjs) | [Mobile](#mobile-em-react-native)
 
 </div>
 <h1 align="center"><img src="./frontend/src/assets/gobarberapp.png"/></h1>
