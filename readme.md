@@ -28,11 +28,11 @@ Responsável por intermediar as requisições aos bancos de dados e fornecer ret
 
 ## Front-end em ReactJS
 
-<h1 align="center">
+<h4 align="center">
 <img src="./frontend/src/assets/front-login.png"/>
 <img src="./frontend/src/assets/front-cadastro.png"/>
 <img src="./frontend/src/assets/front-dashboard.png"/>
-</h1>
+</h4>
 
 ## Mobile em React Native
 
