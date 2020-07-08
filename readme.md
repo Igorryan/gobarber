@@ -36,9 +36,9 @@ Responsável por intermediar as requisições aos bancos de dados e fornecer ret
 
 ## Mobile em React Native
 
-<h1 align="center">
+<h4 align="center">
 <img src="./frontend/src/assets/mobile-screens.png"/>
-</h1>
+</h4>
 
 <div align="center">
   <sub>Built with ❤︎ by <a href="https://www.linkedin.com/in/igorryan/">Igor Ryan</a>
