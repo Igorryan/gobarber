@@ -1,4 +1,5 @@
-<h1 align="center"><img src="./frontend/src/assets/logo_black.svg"/></h1>
+<h1 align="center"><img src="../frontend/src/assets/logo_black.svg"/></h1>
+
 ## Back-end em Node.js
 
 Responsável por intermediar as requisições aos bancos de dados e fornecer retorno em JSON para o front-end web e mobile. Além de enviar e-mail's e tratar de toda regra de negócio.

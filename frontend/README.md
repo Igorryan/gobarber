@@ -1,10 +1,5 @@
-## Front-end em ReactJS
-<h1 align="center"><img src="./frontend/src/assets/logo_black.svg"/></h1>
-<h4 align="center">
-<img src="./frontend/src/assets/front-login.png"/>
-<img src="./frontend/src/assets/front-cadastro.png"/>
-<img src="./frontend/src/assets/front-dashboard.png"/>
-</h4>
+
+<h1 align="center"><img src="../frontend/src/assets/logo_black.svg"/></h1>
 
 ## Iniciando a Aplicação Web (front-end)
 
@@ -19,6 +14,15 @@ yarn start
 ```
 
 Lembre-se de estar com a API em execução.
+
+## Front-end em ReactJS
+
+<h4 align="center">
+<img src="../frontend/src/assets/front-login.png"/>
+<img src="../frontend/src/assets/front-cadastro.png"/>
+<img src="../frontend/src/assets/front-dashboard.png"/>
+</h4>
+
 <div align="center">
   <sub>Built with ❤︎ by <a href="https://www.linkedin.com/in/igorryan/">Igor Ryan</a>
 </div>

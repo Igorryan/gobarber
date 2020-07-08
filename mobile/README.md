@@ -1,9 +1,4 @@
-<h1 align="center"><img src="./frontend/src/assets/logo_black.svg"/></h1>
-## Mobile em React Native
-
-<h4 align="center">
-<img src="./frontend/src/assets/mobile-screens.png"/>
-</h4>
+<h1 align="center"><img src="../frontend/src/assets/logo_black.svg"/></h1>
 
 ## Iniciando a Aplicação Mobile (mobile)
 
@@ -18,6 +13,13 @@ yarn android ou yarn ios ou npx react-native run-android
 ```
 
 Lembre-se de estar com a API em execução.
+
+## Mobile em React Native
+
+<h4 align="center">
+<img src="../frontend/src/assets/mobile-screens.png"/>
+</h4>
+
 <div align="center">
   <sub>Built with ❤︎ by <a href="https://www.linkedin.com/in/igorryan/">Igor Ryan</a>
 </div>
